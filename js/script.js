@@ -4,24 +4,24 @@
 
 var userChoice = prompt("What do you prefer? \n florida lottery or powerball? \n Type one of the two choices below");
 var retryTimes = 1;
+var userInput = userChoice;
 
 
-while (userChoice === ("") || (!isNaN(userChoice))){
+while (userInput === ("") || (!isNaN(userChoice))){
     getPreference();
     retryTimes = retryTimes ++;
-    console.log(retryTimes);
+    console.log(retryTimes + "level 1");
 }
-while (userChoice !== ("powerball") || ("florida lottery")){
+while (userInput !== ("powerball") || ("florida lottery")){
     getPreference();
     retryTimes = retryTimes ++;
-    console.log(retryTimes)
+    console.log(retryTimes + "level 2")
 }
 
-function getPreference(retryTimes){
-    while (retryTimes <= 20) {
-        userChoice = prompt("Sorry we didn't get that. Try typing \n florida lottery of powerball");
-        console.log("retry!");
-    }
+function getPreference(){
+    userChoice = prompt("Sorry we didn't get that. Try typing \n florida lottery or powerball");
+    console.log("retry!");
+    return userChoice;
 }
 console.log(userChoice);
 console.log(retryTimes);
