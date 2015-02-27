@@ -11,13 +11,14 @@ var userInput = userChoice;
 
 
 
-while (userInput !== (String("powerball")) || (String("normal"))){
+while (((userInput !== String("powerball")) || (userInput !== String("florida lottery"))) && (retryCount <= 10)){
         userInput = getPreference(userChoice);
 //        userInput = userChoice;
-        retryTimes = retryCount++;
+        retryTimes = retryCount ++;
         console.log(retryCount + " This is hard work");
-
 }
+
+
 
 function getPreference(userChoice) {
         userInput = (userChoice = prompt("Sorry we didn't get that. Try typing \n florida lottery or powerball"));
