@@ -7,21 +7,21 @@ var retryTimes = 1;
 var userInput = userChoice;
 
 
-while (userInput === ("") || (!isNaN(userChoice))){
-    getPreference();
-    retryTimes = retryTimes ++;
-    console.log(retryTimes + "level 1");
-}
+
+
+
 while (userInput !== ("powerball") || ("florida lottery")){
     getPreference();
+    userInput = userChoice;
     retryTimes = retryTimes ++;
-    console.log(retryTimes + "level 2")
+    console.log(retryTimes + " level 2");
 }
 
-function getPreference(){
+function getPreference() {
     userChoice = prompt("Sorry we didn't get that. Try typing \n florida lottery or powerball");
-    console.log("retry!");
+    console.log("retried!");
     return userChoice;
+
 }
 console.log(userChoice);
 console.log(retryTimes);
